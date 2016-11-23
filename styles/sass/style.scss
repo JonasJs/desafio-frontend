@@ -50,28 +50,43 @@ html,body{
 	}
 	.capitais{
 		color: #000;
+    	margin: 0 auto;
+    	width: 500px;
 		.panel-heading{
 			font-size: 35px;
 		    font-weight: bold;
 		    color: #fff;
+		    margin: 0;
+		    padding: 0;
+		}
+		.container-panel1{
+			width: 50%;
+			
 		}
 		.panel-body{
+				padding: 15px;
+			    width: 50%;
+			    float: left;
+				p{
+					margin-right: 6px;
+	    			float: left;
+	    		}
+				.row{
+					display: block;
+				    font-size: 18px;
+				    font-weight: bold;
+				    margin-top: -9px;
+				    margin-left: 0;
+				    p{
+				    	margin: 25px 0;
+				    	position: absolute;
 
-			p{
-				margin-right: 6px;
-    			float: left;
-    		}
-			.row{
-				display: block;
-			    font-size: 18px;
-			    font-weight: bold;
-			    margin-top: -9px;
-			    margin-left: 0;
-			    p{
-			    	margin-left: 0;
-			    position: absolute;
-			    }
+				    }
+				}
 			}
+		#container-panel2{
+			float: right;
+    		width: 50%;	
 		}
 
 	}
