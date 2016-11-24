@@ -3,8 +3,6 @@ function abreFecha(sel) {
     $(sel).slideToggle();
 }
 
-
-
 var forecast_button = document.querySelector("#forecast");
 forecast_button.addEventListener('click', function() {
   var request_o = null;
