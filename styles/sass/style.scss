@@ -4,14 +4,36 @@
 @import "mixins";
 @import "variaveis";
 
+
+//
+// 		@media #{$variável_breakpoint} {}
+//
+$hd: "screen and (min-width: 1800px)";
+$desktop: "screen and (min-width: 1120px) and (max-width: 1799px)";
+$tablet: "screen and (min-width: 641px) and (max-width: 1119px)";
+$mobile: "screen and (min-width:321px) and (max-width: 640px)";
+$small: "screen and (max-width:320px)";
+
+
+
+a:hover, a:focus{
+	text-decoration: none;
+	color: #222;
+}
+a{
+	color: #222;
+}
+
 html,body{
 	height: 100%;
+	margin:0;
+	padding: 0;
 	width: 100%
 }
 .content{
-	@include bg();
 	color: #fff;
-	height: 100%;
+	height: 4000px;
+	@include bg();
 	margin: 0 auto;
 	.header{
 		width: 100%;
@@ -22,10 +44,43 @@ html,body{
 				font-size: 55px;
 				margin: 95px auto;
 			}
+		.weather{
+			margin: 0 auto;
+		    width: 500px;
+		    background: #fff2e4;
+		    color: #505050;
+		    padding: 20px 0 20px 54px;
+		    @media #{$mobile, $small}{
+				width: 100%;
+			}
+			i.fa.fa-times{
+				float: right;
+			    font-size: 25px;
+			    margin-right: 25px;
+			    cursor: pointer;
+			}
+			h4{
+				font-weight: bold;
+			}
+			h3{
+				font-weight: bold;
+    			font-size: 50px;
+			}
+			ul{
+				list-style: none;
+			    padding: 0;
+			    font-size: 17px;
+			    li{
+			    	font-weight: bold;		
+			    }
+			}
+
+		}	
 		.search{
 			width: 400px;
     		height: 45px;
     		margin: 85px auto;
+    		
     		.searchTerm{
     			width: 350px;
 			    padding: 20px;
@@ -33,6 +88,9 @@ html,body{
 			    font-weight: 300;
    				color: #a6a6a6;
    				@include search();
+   				@media #{$mobile, $small}{
+				width: 270px;
+				}	
     		}
     		.searchButton {
 			    width: 45px;
@@ -45,31 +103,23 @@ html,body{
 		hr{
 			width: 505px;
 			margin-top:65px;
+			@media #{$mobile, $small}{
+				width: 100%;
+			}
 		}
 	}
 	.capitais{
 		color: #000;
     	margin: 0 auto;
     	width: 500px;
-    	.row{
-    		display: flex;
-		    margin-top: 20px;
-		    margin-left: 2px;
-		    color: #222222;
-		    font-size: 12px;
+    	@media #{$mobile, $small}{
+			width: 270px;
+			}	
 
     		p{
     			margin-right: 10px;
     		}
-    		.temp1{
-				display: flex;
-    		}
-    		.temp2{
-				display: flex;
-			    float: right;
-			    margin-left: 184px;
-    		}
-    	}
+    		
 		.panel-heading{
 			font-size: 35px;
 		    font-weight: bold;
@@ -85,19 +135,50 @@ html,body{
 				display: block;
 			    font-size: 25px;
 			    margin-top: -9px;
-			    font-size: 20px;
+			    font-size: 17px;
 			    font-weight: bold;
 			    margin: 0;
 			    float: left;
+			    @media #{$mobile, $small}{
+					    display: grid;
+					    width: 270px;
+			}
+    
+    			.temp2{
+					display: flex;
+					p{
+						font-size: 12px;
+					    font-weight: 100;
+					    margin-right: 15px;
+					}	
+    			}
 			    ul{
 			    	list-style: none;
     				padding-left: 0px;
+    				@media #{$mobile, $small}{
+						padding-left: 0;
+					}
+			    }
+			    li{
+			    	font-size: 17px;
 			    }
 			}
 		#container-panel2{
 			float: right;
     		width: 50%;	
+    		@media #{$mobile, $small}{
+				float: left;
+				}
 		}
 
 	}
+	#paises {
+  		display: none;
+	}
+	#temp-c{
+    	margin-left: 90px;
+    }
+    #temp-f{
+    	margin-left: 55px;
+    }
 }

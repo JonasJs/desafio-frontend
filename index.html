@@ -3,44 +3,56 @@
 <head>
 	<title> Weather</title>
 	<link rel="stylesheet" href="styles/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="Js/js.js"></script>
 </head>
 <body>
 <main class="content">
 	<section class="container header">
 		<h1>Previsão do tempo</h1>
-		
+
+		<div class="weather" id="paises">
+			<a href="javascript:abreFecha('#paises')"><i class="fa fa-times" aria-hidden="true"></i></a>
+			<h4>Niterói, Rj - Brasil</h3>
+			<h3>20°C Nublado</h1>
+			<ul>
+				<li><i class="fa fa-long-arrow-down"></i>16° <i class="fa fa-long-arrow-up" aria-hidden="true"></i>25°<span id="temp-c"> Sensação</span><strong> 19°C</strong></li>
+				<li><span >Vento</span> 18Km/h <span  id="temp-f">Humidade 89%</span></li>
+			</ul>
+		</div>
+		<div id="weather"></div>
+
 		<div class="search">
-	      <input type="text" class="searchTerm" placeholder="Insira aqui o nome da cidade">
-	      <button type="submit" class="searchButton">
+	      <input id="city" type="text" class="searchTerm" placeholder="Insira aqui o nome da cidade">
+	      <button  id="forecast" type="submit"  class="searchButton">
 	        <i class="fa fa-search" aria-hidden="true"></i>
 	     </button>
    		</div>
    		 <hr>
    		<article class="capitais">
    		<div class="panel-heading">Capitais</div>
-   			<div class="row">
-   				<div class="temp1">
-	   				<p>Min</p>
-					<p>Máx</p>
-				</div>
-				<div class="temp2">
-	   				<p>Min</p>
-					<p>Máx</p>
-				</div>
-   			</div>
 			<div class="container-panel1">
+				
 				<div class="cidades">
-				<ul>
-					<li>18° 27° Rio de janeiro</li>
-					<li>14° 22° São Paulo</li>
-					<li>21° 32° Belo Horizonte</li>
-					<li>24° 37° Brasília</li>
-					<li>24° 37° Belém</li>
-				</ul>
+					<div class="temp2">
+		   				<p>Min</p>
+						<p>Máx</p>
+					</div>
+					<ul>
+						<li> <a href="javascript:abreFecha('#paises')">18° 27° Rio de janeiro</a></li>
+						<li><a href="javascript:abreFecha('#sp')">14° 22° São Paulo</a></li>
+						<li>21° 32° Belo Horizonte</li>
+						<li>24° 37° Brasília</li>
+						<li>24° 37° Belém</li>
+					</ul>
 				</div>
 			</div>	   	
 			<div class="container-panel1" id="container-panel2">
 				<div class="cidades">
+					<div class="temp2">
+		   				<p>Min</p>
+						<p>Máx</p>
+					</div>
 					<ul>
 						<li>23° 37° Salvador</li>
 						<li>5° 14 º Curitiba</li>
